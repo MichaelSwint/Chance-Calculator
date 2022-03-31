@@ -1,0 +1,6 @@
+venv/include/
+venv/Lib/
+venv/Scripts/
+venv/Programs/Windows.py
+venv/Programs/test.py
+venv/Programs/pyvenv.cfg
