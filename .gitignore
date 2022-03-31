@@ -4,3 +4,6 @@ venv/Scripts/
 venv/Programs/Windows.py
 venv/Programs/test.py
 venv/Programs/pyvenv.cfg
+venv/Windows.py
+venv/test.py
+venv/pyvenv.cfg
