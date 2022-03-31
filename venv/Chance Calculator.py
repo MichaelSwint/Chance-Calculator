@@ -1,4 +1,5 @@
 import PySimpleGUI as sg
+import sys
 
 
 #Set the theme for the gui (text, colors background, colors etc.)
@@ -25,6 +26,10 @@ def calc_chance(series, per):
        chance = 1-((1-per)**series)
        return chance
 
+#If the user cancels or closes the window, no need to run remainder of program.
+if event == sg.WIN_CLOSED or event == 'Cancel':
+        exit()
+
 #User input is currently type string, this converts to float.
 float_Chance = float(values['-Chance-'])
 float_Runs = float(values['-Runs-'])
@@ -34,6 +39,7 @@ chance = calc_chance(float_Runs, float_Chance)
 
 #Create a 'popup' window with the completed calculation!
 sg.popup(F"The chance of an event occuring at least once over {values['-Runs-']} runs is {chance:.10%}")
+
 
 
 
